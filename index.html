@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>青年啟發 Alpha Youth | 台大小組</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="main-nav">
+        <div class="logo">NTU | 青年啟發</div>
+        <button class="map-btn" id="openMapBtn">查看地圖</button>
+    </nav>
+
+    <header id="hero">
+        <div class="glass-container">
+            <div class="hero-links">
+                <a href="#about">啟發流程</a>
+                <a href="#schedule">活動日期</a>
+                <a href="#gallery">精彩紀錄</a>
+            </div>
+            
+            <div class="hero-text">
+                <h1>探索生命 · 青年啟發</h1>
+                <!--<p>先吃飯、再遊戲、後聊天。<br>一個讓你輕鬆討論生命大哉問的地方。</p>-->
+                <a href="#schedule" class="cta-btn">查看課程表</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <h2 class="section-title">啟發流程</h2>
+        <div class="flow-container">
+            <div class="flow-item">
+                <div class="time">18:30</div>
+                <h3>🍴 享用晚餐</h3>
+                <p>在美食中開啟輕鬆對話</p>
+            </div>
+            <div class="flow-item">
+                <div class="time">19:15</div>
+                <h3>🎮 破冰遊戲</h3>
+                <p>好玩的遊戲，認識新朋友</p>
+            </div>
+            <div class="flow-item">
+                <div class="time">19:45</div>
+                <h3>🎬 啟發影片</h3>
+                <p>探索生命意義的短片</p>
+            </div>
+            <div class="flow-item">
+                <div class="time">20:15</div>
+                <h3>🗣️ 小組討論</h3>
+                <p>真誠分享不同的觀點</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="schedule" class="section bg-gold-light">
+        <h2 class="section-title">活動日期</h2>
+        <div class="course-grid">
+            
+            <div class="course-card sky-blue">
+                <div class="card-date">3/25 (三)</div>
+                <div class="card-content">
+                    <h3>歡迎加入這場對談</h3>
+                    <p class="host">主持人：家禎老師</p>
+                </div>
+            </div>
+
+            <div class="course-card sky-blue">
+                <div class="card-date">4/01 (三)</div>
+                <div class="card-content">
+                    <h3>耶穌是…？</h3>
+                    <p class="host">主持人：宥凱</p>
+                </div>
+            </div>
+
+            <div class="course-card light-purple">
+                <div class="card-date">4/13-17</div>
+                <div class="card-content">
+                    <h3>台大期中考週</h3>
+                    <p class="info-text">祝大家期中考順利！</p>
+                </div>
+            </div>
+
+            <div class="course-card peach-red">
+                <div class="card-date">4/22 (三)</div>
+                <div class="card-content">
+                    <h3>特別活動：戰鬥陀螺大賽</h3>
+                    <p class="info-text">主持人：建軍</p>
+                </div>
+            </div>
+
+            <div class="course-card sky-blue">
+                <div class="card-date">4/29 (三)</div>
+                <div class="card-content">
+                    <h3>真愛是什麼樣子？</h3>
+                    <p class="host">主持人：恩一</p>
+                </div>
+            </div>
+
+            <div class="course-card sky-blue">
+                <div class="card-date">5/06 (三)</div>
+                <div class="card-content">
+                    <h3>我為什麼要和上帝建立關係？</h3>
+                    <p class="host">主持人：頌恩</p>
+                </div>
+            </div>
+
+            <div class="course-card sky-blue">
+                <div class="card-date">5/13 (三)</div>
+                <div class="card-content">
+                    <h3>與上帝的關係到底是什麼樣子？</h3>
+                    <p class="host">主持人：洵哥</p>
+                </div>
+            </div>
+
+            <div class="course-card light-purple">
+                <div class="card-date">6/08-12</div>
+                <div class="card-content">
+                    <h3>台大期末考週</h3>
+                    <p class="info-text">祝大家學期完美結束！</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="gallery" class="section">
+        <h2 class="section-title">精彩紀錄</h2>
+        <div class="photo-grid">
+            <!--預留之後放圖片
+            <div class="photo-item"><img src="https://picsum.photos/400/300?random=91" alt="活動照"></div>
+            -->
+        </div>
+    </section>
+
+    <div id="mapModal" class="modal">
+        <div class="modal-content"><span class="close-btn">&times;</span><img src="assets/Map.jpg" alt="地圖" class="modal-img"></div>
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close-lb">&times;</span><img id="imgFull" class="lb-img">
+    </div>
+
+    <footer><p>© 2026 青年啟發 @ NTU | 台大福音小組</p></footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

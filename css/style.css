@@ -1,0 +1,76 @@
+:root {
+    --gold-main: #d4a017;
+    --gold-light: #fff9e6;
+    --sky-blue: #87ceeb;      
+    --light-purple: #d1b3ff;  
+    --peach-red: #ff4d6d;     
+    --text-dark: #333;
+}
+
+body { font-family: 'Noto Sans TC', sans-serif; margin: 0; line-height: 1.6; scroll-behavior: smooth; }
+
+/* 導覽列：極左上黑字 */
+.main-nav { display: flex; justify-content: space-between; align-items: center; padding: 10px 2%; background: white; position: sticky; top: 0; z-index: 1000; }
+.logo { font-size: 1.6rem; font-weight: bold; color: #000; }
+.map-btn { background: #333; color: white; border: none; padding: 8px 18px; border-radius: 8px; cursor: pointer; font-weight: 500; }
+.map-btn:hover { background: var(--gold-main); }
+
+/* 主視覺：修復手機文字擠壓 */
+header { height: 80vh; background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=80') center/cover; display: flex; align-items: center; justify-content: center; }
+.glass-container { background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.3); padding: 30px 5%; border-radius: 20px; text-align: center; color: white; width: 85%; max-width: 800px; }
+.hero-links a { color: white; text-decoration: none; margin: 0 10px; font-weight: bold; font-size: 1rem; }
+header h1 { font-size: calc(1.8rem + 1vw); margin: 15px 0; } /* 自動縮放字體 */
+.cta-btn { display: inline-block; margin-top: 15px; padding: 12px 40px; background: #000; color: #fff; text-decoration: none; border-radius: 50px; font-weight: bold; }
+
+/* 區塊 */
+.section { padding: 50px 5%; }
+.bg-gold-light { background-color: var(--gold-light); }
+.section-title { text-align: center; margin-bottom: 30px; font-size: 2rem; }
+
+/* 活動流程：全圈金邊 */
+.flow-container { display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
+.flow-item { background: white; padding: 20px; border-radius: 12px; flex: 1; min-width: 180px; text-align: center; border: 4px solid var(--gold-main); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+.flow-item .time { color: var(--gold-main); font-size: 1.2rem; font-weight: bold; }
+
+/* 課程進度：4x2 佈局 & 縮減空白 */
+.course-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+@media (max-width: 1024px) { .course-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .course-grid { grid-template-columns: 1fr; } }
+
+.course-card { background: white; border-radius: 15px; border-top: 6px solid #ccc; box-shadow: 0 3px 8px rgba(0,0,0,0.05); height: 110px; position: relative; padding: 12px; display: flex; align-items: flex-end; }
+.card-date { position: absolute; top: 8px; left: 12px; font-size: 1.2rem; font-weight: bold; color: #444; }
+.card-content { width: 100%; text-align: left; }
+/* 1. 調整標題，讓它更顯眼並填補空間 */
+.course-card h3 {
+    white-space: nowrap;       /* 保持單行 */
+    font-size: 1.3rem;         /* 把字體從 0.9rem 調大到 1.3rem */
+    margin: 8px 0 4px 0;      /* 增加一點上下間距 */
+    font-weight: 700;
+    color: #000;               /* 讓標題顏色更重，視覺感更滿 */
+}
+
+/* 2. 稍微調大主持人與說明文字，讓整體更平衡 */
+.host, .info-text {
+    color: #444;
+    font-size: 1.1rem;         /* 從 0.85rem 調大到 1.1rem */
+    margin-top: 2px;
+}
+
+/* 3. 如果想讓內容在格子裡更分散（填滿垂直空間），可以調整這個 */
+.card-content {
+    width: 100%;
+    text-align: left;
+    margin-top: 25px;          /* 增加與上方日期的距離，推向下方 */
+}
+.course-card.sky-blue { border-top-color: var(--sky-blue); }
+.course-card.light-purple { border-top-color: var(--light-purple); background: #fdfbff; }
+.course-card.peach-red { border-top-color: var(--peach-red); background: #fff5f7; }
+
+/* 相簿與彈窗 */
+.photo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; }
+.photo-item img { width: 100%; height: 150px; object-fit: cover; border-radius: 10px; cursor: pointer; }
+.modal, .lightbox { display: none; position: fixed; top:0; left:0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 2000; }
+.modal-content, .lb-img { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 90%; }
+.modal-img { width: 100%; border-radius: 10px; border: 4px solid var(--gold-main); }
+.close-btn, .close-lb { position: absolute; top: 20px; right: 25px; color: white; font-size: 35px; cursor: pointer; }
+footer { text-align: center; padding: 40px; background: #222; color: #999; font-size: 0.8rem; }
